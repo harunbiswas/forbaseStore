@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function NavHeader() {
+export default function NavHeader({ isToggle }) {
   const [items, setItems] = useState([
     {
       link: "/",
@@ -28,7 +28,7 @@ export default function NavHeader() {
     },
   ]);
   return (
-    <div className="header-nav">
+    <div className={`header-nav ${(isToggle && "show") || ""}`}>
       <ul className="header-nav-menu">
         {items &&
           items.map((item, i) => (

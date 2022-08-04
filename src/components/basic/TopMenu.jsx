@@ -3,10 +3,10 @@ import { BiSearch } from "react-icons/bi";
 import { BsCartFill } from "react-icons/bs";
 import { FaRegUserCircle } from "react-icons/fa";
 
-export default function TopMenu() {
+export default function TopMenu({ icons = true }) {
   const [btns, setBtns] = useState([
-    { link: "", icon: <BiSearch /> },
-    { link: "", icon: <FaRegUserCircle /> },
+    icons && { link: "", icon: <BiSearch /> },
+    icons && { link: "", icon: <FaRegUserCircle /> },
     { link: "", icon: <BsCartFill /> },
   ]);
   return (
